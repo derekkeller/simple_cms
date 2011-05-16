@@ -1,0 +1,24 @@
+<% form_for @section do |f| %>
+
+<%= render 'shared/form', :target => @section %>
+
+	<p>
+		<%= f.label :page_id %><br />
+		<%= f.text_field :page_id %>
+	</p>
+	<p>
+		<%= f.label :name %><br />
+		<%= f.text_field :name %>
+	</p>
+	<p>
+		<%= f.label :position %><br />
+		<%= f.text_field :position %>
+	</p>
+	<p>
+		<%= f.label :visible %><br />
+		<%= f.check_box :visible %>
+	</p>
+	<p>
+		<%= f.submit :Done %>
+	</p>
+<% end %>

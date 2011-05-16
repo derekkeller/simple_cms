@@ -1,0 +1,20 @@
+<h1>Subject Detail</h1>
+
+	<table>
+		<tr>
+			<th>Name</th>
+			<td><%= @subject.name %></td>
+		</tr>
+		<tr>
+			<th>Position</th>
+			<td><%= @subject.position %></td>
+		</tr>
+		<tr>
+			<th>Visible</th>
+			<td><%= @subject.visible? ? 'Yes' : 'No' %></td>
+		</tr>
+	</table>
+	
+<br />
+<%= link_to "Back to subjects", subjects_path %>
+				

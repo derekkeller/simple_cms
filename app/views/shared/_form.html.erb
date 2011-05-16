@@ -1,0 +1,6 @@
+<% if target.errors.any? %>
+	<%= pluralize(target.errors.size, "error") %> prevented this from properly saving:
+		<% target.errors.full_messages.each do |message| %>
+			<%= message %><br />
+		<% end %>
+<% end %>

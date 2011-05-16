@@ -1,0 +1,29 @@
+<% form_for @page do |f| %>
+
+	<%= render 'shared/form', :target => @page %>
+	
+	<p>
+		<%= f.label :subject_id %><br />
+		<%= f.text_field :subject_id %>
+	</p>
+	<p>
+		<%= f.label :name %><br />
+		<%= f.text_field :name %>
+	</p>
+	<p>
+		<%= f.label :permalink %><br />
+		<%= f.text_field :permalink %>
+	</p>
+	<p>
+		<%= f.label :position %><br />
+		<%= f.text_field :position %>
+	</p>
+	<p>
+		<%= f.label :visible %><br />
+		<%= f.check_box :visible %>
+	</p>
+	<p>
+		<%= f.submit :Done %>
+	</p>
+<% end %>
+		
