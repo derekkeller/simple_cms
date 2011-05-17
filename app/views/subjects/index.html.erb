@@ -1,6 +1,12 @@
-<h1>Subjects Index Page</h1>
+<div class='page_title'>
+	Subjects Index Page
+</div>
+<div class='page_title_sub'>
+	<%= pluralize(@subjects.size, 'Subject') %> Found
+</div>
 
-<table>
+
+<table class='no_space_tables'>
 	<tr>
 		<th>Name</th>
 		<th>Position</th>
@@ -12,7 +18,7 @@
 		<th></th>		
 	</tr>
 	<% @subjects.each do |subject| %>
-	<tr>
+	<tr class="<%= cycle('odd', 'even') %>">
 		<td><%= subject.name %></td>
 		<td><%= subject.position %></td>
 		<td><%= subject.visible? ? 'Yes' : 'No' %></td>
@@ -20,7 +26,6 @@
 		<td><%= link_to "Show", subject %></td>
 		<td><%= link_to "Edit", edit_subject_path(subject) %></td>
 		<td><%= link_to "Destroy", subject, :confirm => "Are you sure?", :method => :delete %></td>
-		<td><%= link_to "Edit", {:action => :edit, :id => subject.id } %></td>
 	</tr>
 <% end %>
 </table>

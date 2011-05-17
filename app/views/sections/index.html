@@ -1,11 +1,19 @@
-<h1>Section Index</h1>
+<div class='page_title'>
+	Section Index
+</div>
+<div class='page_title_sub'>
+	<%= pluralize(@sections.size, 'Section' )%> Found
+</div>
 
 <table>
 	<tr>
 		<th>Page ID</th>
+		<th>Page Name</th>
 		<th>Name</th>
 		<th>Position</th>
 		<th>Visible</th>
+		<th>Content Type</th>
+		<th>Content</th>
 		<th></th>
 		<th></th>		
 		<th></th>
@@ -13,9 +21,12 @@
 	<% @sections.each do |section| %>
 	<tr>
 		<td><%= section.page_id %></td>
+		<td><%= section.page.name %></td>
 		<td><%= section.name %></td>
 		<td><%= section.position %></td>
 		<td><%= section.visible? ? 'Yes' : 'No' %></td>
+		<td><%= section.content_type.capitalize %></td>
+		<td width='200px'><%= truncate(section.content, :length => 50, :omission => "...") %></td>
 		<td><%= link_to 'Show', section %></td>
 		<td><%= link_to 'Edit', edit_section_path(section) %></td>
 		<td><%= link_to 'Destroy', section, :message => 'Are you sure?', :method => :delete %></td>

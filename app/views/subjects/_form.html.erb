@@ -7,15 +7,15 @@
 	<%= f.text_field :name %>
 </p>
 <p>
-	<%= f.label :position %><br />
-	<%= f.text_field :position %>
+	<%= f.label :position %>
+	<%= f.select :position, (1..@subject_count) %>
 </p>
 <p>
-	<%= f.label :visible %><br />
-	<%= f.check_box :visible %>
+	<%= f.label :visible %>
+	<%= f.select :visible, {"Visible" => true, "Hidden" => false} %>
 </p>
 <p>
-	<%= f.submit :done %>
+	<%= f.submit :Done %>
 </p>
 
 <% end %>

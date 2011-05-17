@@ -13,6 +13,16 @@
 			<th>Visible</th>
 			<td><%= @subject.visible? ? 'Yes' : 'No' %></td>
 		</tr>
+		<tr>
+			<th>Pages</th>
+			<td>
+				<ul style="list-style-type:none; padding-left:0;">
+					<% @subject.pages.each do |page| %>
+						<li><%= page.name %></li>
+					<% end %>
+				</ul>
+			</td>
+		</tr>
 	</table>
 	
 <br />

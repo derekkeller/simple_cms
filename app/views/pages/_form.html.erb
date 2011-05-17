@@ -4,7 +4,7 @@
 	
 	<p>
 		<%= f.label :subject_id %><br />
-		<%= f.text_field :subject_id %>
+		<%= f.select :subject_id, (Subject.all.collect {|s| [s.name, s.id]}) %>
 	</p>
 	<p>
 		<%= f.label :name %><br />
@@ -16,7 +16,7 @@
 	</p>
 	<p>
 		<%= f.label :position %><br />
-		<%= f.text_field :position %>
+		<%= f.select :position, (1..@page_count) %>
 	</p>
 	<p>
 		<%= f.label :visible %><br />
@@ -26,4 +26,3 @@
 		<%= f.submit :Done %>
 	</p>
 <% end %>
-		

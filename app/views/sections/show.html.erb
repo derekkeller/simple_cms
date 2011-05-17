@@ -17,6 +17,14 @@
 		<th>Visible</th>
 		<td><%= @section.visible? ? 'Yes' : 'No' %></td>
 	</tr>
+	<tr>
+		<th>Content Type</th>
+		<td><%= @section.content_type.capitalize %></td>
+	</tr>
+	<tr>
+		<th>Content</th>
+		<td><%= @section.content %></td>
+	</tr>
 </table>
 		
 <br />

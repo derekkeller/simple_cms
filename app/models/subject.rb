@@ -1,6 +1,6 @@
 class Subject < ActiveRecord::Base
 
-  has_many :pages
+  has_many :pages, :dependent => :destroy
 
   validates :name, :presence => {:message => "stopped this from working - and I made this error!"}
   # validates :position, :length => {:within => 2..3, :message => "is freaking crazy in here!"}
